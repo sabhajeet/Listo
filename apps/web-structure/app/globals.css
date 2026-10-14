@@ -1,0 +1,496 @@
+* {
+  box-sizing: border-box;
+  }
+
+html,
+body {
+margin: 0;
+padding: 0;
+font-family: Arial, Helvetica, sans-serif;
+background: #f7f7f7;
+color: #222;
+}
+
+a {
+color: inherit;
+text-decoration: none;
+}
+
+/* =========================
+HEADER
+========================= */
+
+.site-header {
+background: white;
+border-bottom: 1px solid #e5e5e5;
+position: sticky;
+top: 0;
+z-index: 100;
+}
+
+.header-container {
+max-width: 1200px;
+margin: auto;
+height: 70px;
+padding: 0 20px;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.logo {
+font-size: 28px;
+font-weight: 800;
+letter-spacing: 1px;
+}
+
+.desktop-nav {
+display: flex;
+gap: 28px;
+}
+
+.desktop-nav a {
+font-size: 15px;
+}
+
+.header-actions {
+display: flex;
+align-items: center;
+gap: 20px;
+}
+
+.login-link {
+font-weight: 600;
+}
+
+.post-button {
+background: #111;
+color: white;
+padding: 11px 18px;
+border-radius: 6px;
+font-weight: 600;
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero {
+background: white;
+padding: 70px 20px;
+}
+
+.hero-content {
+max-width: 1000px;
+margin: auto;
+text-align: center;
+}
+
+.hero h1 {
+font-size: 48px;
+line-height: 1.15;
+margin: 0;
+}
+
+.hero-subtitle {
+color: #666;
+font-size: 18px;
+margin: 18px 0 35px;
+}
+
+/* =========================
+SEARCH
+========================= */
+
+.search-box {
+max-width: 900px;
+margin: auto;
+
+display: flex;
+gap: 10px;
+
+background: white;
+padding: 10px;
+
+border: 1px solid #ddd;
+border-radius: 10px;
+
+box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.search-input-wrapper,
+.location-input {
+display: flex;
+align-items: center;
+gap: 10px;
+
+padding: 0 14px;
+
+border: 1px solid #ddd;
+border-radius: 7px;
+
+background: white;
+}
+
+.search-input-wrapper {
+flex: 2;
+}
+
+.location-input {
+flex: 1;
+}
+
+.search-input-wrapper input,
+.location-input select {
+width: 100%;
+border: none;
+outline: none;
+background: transparent;
+padding: 14px 0;
+font-size: 15px;
+}
+
+.search-button {
+display: flex;
+align-items: center;
+justify-content: center;
+
+padding: 0 28px;
+
+background: #111;
+color: white;
+
+border-radius: 7px;
+font-weight: 600;
+}
+
+/* =========================
+SECTIONS
+========================= */
+
+.section {
+max-width: 1200px;
+margin: auto;
+padding: 45px 20px;
+}
+
+.section-header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+margin-bottom: 22px;
+}
+
+.section-header h2 {
+margin: 0;
+font-size: 24px;
+}
+
+.section-header a {
+font-size: 14px;
+font-weight: 600;
+}
+
+/* =========================
+CATEGORIES
+========================= */
+
+.category-grid {
+display: grid;
+
+grid-template-columns: repeat(8, 1fr);
+
+gap: 15px;
+}
+
+.category-card {
+background: white;
+border: 1px solid #e5e5e5;
+
+border-radius: 8px;
+
+padding: 20px 10px;
+
+text-align: center;
+
+transition: transform 0.15s ease;
+}
+
+.category-card:hover {
+transform: translateY(-3px);
+}
+
+.category-icon {
+font-size: 32px;
+margin-bottom: 10px;
+}
+
+.category-card span {
+font-size: 13px;
+}
+
+/* =========================
+LISTINGS
+========================= */
+
+.listing-grid {
+display: grid;
+
+grid-template-columns: repeat(4, 1fr);
+
+gap: 20px;
+}
+
+.listing-card {
+background: white;
+
+border: 1px solid #e3e3e3;
+border-radius: 8px;
+
+overflow: hidden;
+}
+
+.listing-image {
+height: 200px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+background: #eeeeee;
+
+font-size: 70px;
+}
+
+.listing-content {
+padding: 15px;
+}
+
+.listing-content h3 {
+margin: 0 0 10px;
+
+font-size: 16px;
+
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.listing-content strong {
+display: block;
+
+font-size: 18px;
+
+margin-bottom: 10px;
+}
+
+.listing-content p {
+margin: 0 0 6px;
+
+font-size: 13px;
+color: #666;
+}
+
+.listing-content small {
+color: #888;
+}
+
+/* =========================
+MOBILE NAVIGATION
+========================= */
+
+.mobile-navigation {
+display: none;
+}
+
+/* =========================
+TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+.category-grid {
+grid-template-columns: repeat(4, 1fr);
+}
+
+.listing-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.desktop-nav {
+display: none;
+}
+
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+body {
+padding-bottom: 70px;
+}
+
+.header-container {
+height: 60px;
+padding: 0 15px;
+}
+
+.logo {
+font-size: 23px;
+}
+
+.login-link {
+display: none;
+}
+
+.post-button {
+padding: 8px 12px;
+font-size: 13px;
+}
+
+/* Hero */
+
+.hero {
+padding: 40px 15px;
+}
+
+.hero h1 {
+font-size: 32px;
+}
+
+.hero-subtitle {
+font-size: 15px;
+margin-bottom: 25px;
+}
+
+/* Search */
+
+.search-box {
+flex-direction: column;
+padding: 8px;
+
+```
+border: none;
+box-shadow: none;
+```
+
+}
+
+.search-input-wrapper,
+.location-input {
+width: 100%;
+}
+
+.search-button {
+min-height: 48px;
+}
+
+/* Sections */
+
+.section {
+padding: 30px 15px;
+}
+
+.section-header h2 {
+font-size: 20px;
+}
+
+/* Categories */
+
+.category-grid {
+grid-template-columns: repeat(4, 1fr);
+gap: 8px;
+}
+
+.category-card {
+padding: 12px 5px;
+}
+
+.category-icon {
+font-size: 25px;
+}
+
+.category-card span {
+font-size: 11px;
+}
+
+/* Listings */
+
+.listing-grid {
+grid-template-columns: repeat(2, 1fr);
+gap: 10px;
+}
+
+.listing-image {
+height: 140px;
+font-size: 50px;
+}
+
+.listing-content {
+padding: 10px;
+}
+
+.listing-content h3 {
+font-size: 14px;
+}
+
+.listing-content strong {
+font-size: 16px;
+}
+
+/* Bottom Navigation */
+
+.mobile-navigation {
+position: fixed;
+
+
+display: flex;
+
+left: 0;
+right: 0;
+bottom: 0;
+
+height: 65px;
+
+background: white;
+
+border-top: 1px solid #ddd;
+
+z-index: 200;
+
+justify-content: space-around;
+
+
+}
+
+.mobile-navigation a {
+flex: 1;
+
+
+display: flex;
+flex-direction: column;
+
+align-items: center;
+justify-content: center;
+
+gap: 3px;
+
+font-size: 20px;
+
+
+}
+
+.mobile-navigation small {
+font-size: 10px;
+}
+
+.mobile-navigation .mobile-post {
+font-size: 25px;
+}
+
+}
